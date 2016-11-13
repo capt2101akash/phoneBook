@@ -1,0 +1,21 @@
+<ion-view view-title="Contacts">
+  <!-- <ion-tab title="Refresh " icon-off="ion-refresh" icon-on="ion-refresh" onclick = "reload()">
+     <ion-nav-view name="tab-dash"></ion-nav-view>
+  </ion-tab> -->
+  <ion-content>
+    <ion-list>
+    <button class="button icon ion-refresh" onclick = "reload()">
+  </button>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="img/default.png">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.number}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
